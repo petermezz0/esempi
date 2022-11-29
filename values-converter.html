@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        #valuta2{
+            width: 18em;
+            height: 2em;
+            padding: 0.5em;
+            border: 0.2em black solid;
+            display: block;
+            border-radius: 10%;
+        }
+
+        #valuta1{
+            width: 18em;
+            height: 2em;
+            padding: 0.5em;
+            border: 0.2em black solid;
+            border-radius: 10%;
+        }
+    </style>
+</head>
+<body>
+        <h1>CAMBIO VALUTA</h1>
+        <input type="text" id="valuta1" oninput="convert()" placeholder="importo in €">
+        <input type="text" id="valuta2" oninput="invert()" placeholder="importo i $">
+        <button onclick="invert()">invert</button>
+
+    <script>
+
+            function convert(){
+               let valuta1 = Number(document.querySelector("#valuta1").value); 
+               let result = Number(valuta1 * 1.03);
+               document.querySelector("#valuta2").value = result + "$";
+            }
+
+            function invert(){
+               let valuta2 = Number(document.querySelector("#valuta2").value); 
+               let result = Number(valuta2 * 0.967);
+               document.querySelector("#valuta1").value = result + "€";
+            }
+         
+            let compute = convert();
+
+    </script>
+</body>
+</html>
