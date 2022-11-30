@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa possimus ab reprehenderit temporibus, omnis officia praesentium veritatis in recusandae dignissimos sint nesciunt. Molestiae delectus qui quidem perferendis sit dolor eveniet.
+    <script>
+
+        
+        let number = 2334;
+        let i = 0;
+        function getDigits(number){
+            while (i < number.toString().length){
+                 i++
+            }
+            return i;
+        } 
+
+        let g = getDigits(number);
+        console.log(g);
+
+
+
+
+        let array = ["ciao", "Lorem Ipsum", "Lorem ipsum dolor sit amet", "Lorem ipsum dolor sit amet consectetur"];
+        let newArray = [];
+           function counter(array){
+            for (let i = 0; i < array.length; i++){
+                newArray.push(array[i].length);
+            }
+              return Math.max(...newArray);
+           }
+
+           let f = counter(array);
+           console.log(f);
+    </script>
+</body>
+</html>
