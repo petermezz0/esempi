@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let carsList = [
+            {
+                marchio: "Ferrari",
+                modello: "488",
+                anno: "2016",
+                motore: "V8",
+                cilindrata: "3900 cm2",
+                potenza: "670 cv",
+                coppiaMax: "760 nm",
+                prezzo: 240000
+            },
+
+            {
+                marchio: "Ferrari",
+                modello: "F 430",
+                anno: "2004",
+                motore: "V8",
+                cilindrata: "4300 cm2",
+                potenza: "490 cv",
+                coppiaMax: "465 nm",
+                prezzo: 140000
+            },
+
+            {
+                marchio: "Ferrari",
+                modello: "F 12",
+                anno: "2012",
+                motore: "V12",
+                cilindrata: "6262 cm2",
+                potenza: "740 cv",
+                coppiaMax: "690 nm",
+                prezzo: 220000
+            },
+
+            {
+                marchio: "Ferrari",
+                modello: "F 40",
+                anno: "1987",
+                motore: "V8",
+                cilindrata: "2936 cm2",
+                potenza: "478 cv",
+                coppiaMax: "577 nm",
+                prezzo: 2300000
+            }
+        ]
+
+
+        let prezzi = [];
+        let maxPrice = 0;
+        function mostExpensive(c){
+            for (let i = 0; i < carsList.length; i++){
+                prezzi.push(carsList[i]["prezzo"]);
+            }
+            maxPrice = Math.max(...prezzi);
+            return maxPrice;
+        }
+
+        let prices = mostExpensive(carsList);
+        console.log(prices);
+
+
+    </script>
+</body>
+</html>
